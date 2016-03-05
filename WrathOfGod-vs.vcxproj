@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectName>WrathOfGod</ProjectName>
+    <DataAssets>Data</DataAssets>
+    <ZillaLibDir>../ZillaLib</ZillaLibDir>
+    <ProjectGuid>{A7B64438-8902-B22F-7CA5-07BC54FC60E9}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Emscripten-Debug|Win32">
+      <Configuration>Emscripten-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Emscripten-Release|Win32">
+      <Configuration>Emscripten-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NACL-Debug|Win32">
+      <Configuration>NACL-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="NACL-Release|Win32">
+      <Configuration>NACL-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android-Debug|Win32">
+      <Configuration>Android-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android-Release|Win32">
+      <Configuration>Android-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(ZillaLibDir)/ZillaApp-vs.props" />
+  <ItemGroup>
+    <ClInclude Include="include.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SceneGame.cpp" />
+    <ClCompile Include="SceneTitle.cpp" />
+    <ClCompile Include="world.cpp" />
+    <ClInclude Include="world.h" />
+    <ClCompile Include="../ZillaLib/Opt/chipmunk/chipmunk.cpp" />
+    <ResourceCompile Include="WrathOfGod.rc" />
+  </ItemGroup>
+</Project>
