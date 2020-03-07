@@ -178,7 +178,7 @@ struct sSceneGame : public ZL_Scene
 		}
 		if (World.things_excited != lastthingsexcited)
 		{
-			scalar percent = ZL_Math::Max(0, ZL_Math::Min(1, s(World.things_excited) / (s((World.things_total*10/11)-5))));
+			scalar percent = ZL_Math::Max(s(0), ZL_Math::Min(s(1), s(World.things_excited) / (s((World.things_total*10/11)-5))));
 			txtPercent.SetText(ZL_String::format("%d%%", (int)(percent*100)));
 			lastthingsexcited = World.things_excited;
 			ZL_Timer::EndTransitionFor(&scalePercent);
